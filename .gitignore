@@ -1,0 +1,9 @@
+mkTar*
+
+.Rproj.user
+.Rhistory
+.RData
+
+auth.R
+test.db3
+movies.RData
