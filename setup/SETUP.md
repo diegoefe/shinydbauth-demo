@@ -1,6 +1,23 @@
 ### Setup
 
-1. Open a terminal into this folder
+1. Open a terminal and cd into this folder:
+    - In Linux/MacOS/*nix: open bash terminal
+        ```
+        cd /folder/this/folder/is/in
+        ```
+    - Windows: Run/cmd.exe
+        ```
+        cd folder\this\folder\is\in
+        ```
+1. **Windows only**: check for R/Rscript in %PATH%
+    ```
+    Rscript --version
+    ```
+    If not found, run:
+    ```
+    set_r_path.cmd
+    ```
+    It should print the version of found Rscript, if not please manually add the folder containing R.exe/Rscript.exe to your %PATH% environment variable and start another terminal session into this folder.
 1. Run setup_data.R to download demo data:
     ```
     $ Rscript setup_data.R
@@ -38,7 +55,7 @@
         ```
         launch_in_browser.cmd
         ```
-    - In Linux/*nix:
+    - In Linux/MacOS/*nix:
         ```bash
         $ ./launch_in_browser.sh
         ```

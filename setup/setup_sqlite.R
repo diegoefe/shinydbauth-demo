@@ -1,7 +1,6 @@
 options(warn=-1)
 # options(warn=0)
 if(!require("RSQLite")) {
-   # install.packages(c("RSQLite", "DBI", "stringr"), repos='http://cran.us.r-project.org')
    install.packages(readLines(file("required_packages.txt", "r")), repos='http://cran.us.r-project.org')
 } else {
    print("Required packages already installed!")
