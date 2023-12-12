@@ -37,3 +37,5 @@ on.exit(dbDisconnect(conn))
 for(sql in sqls) {
     dbExecute(conn, sql)
 }
+
+print(paste0("Se ha creado '", testDB, "'"))
