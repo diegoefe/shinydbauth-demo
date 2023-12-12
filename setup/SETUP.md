@@ -20,13 +20,13 @@
     It should print the version of found Rscript, if not please manually add the folder containing R.exe/Rscript.exe to your %PATH% environment variable and start another terminal session into this folder.
 1. Run setup_data.R to download demo data:
     ```
-    $ Rscript setup_data.R
+    Rscript setup_data.R
     ```
 1. Choose database backend to use:
     1. For SQLite:
         1. Create test database:
             ```
-            $ Rscript setup_sqlite.R
+            Rscript setup_sqlite.R
             ```
         1. Users and passwords:
             - gman/gman1
@@ -42,12 +42,12 @@
            Use the signatures for **db_pg.R**'s queries
         1. Copy **sample-auth.R** to **auth.R** and set it up with correct values:
             ```bash
-            $ cp sample-auth.R auth.R
-            $ vim auth.R
+            cp sample-auth.R auth.R
+            vim auth.R
             ```
 1. Change to the parent directory:
     ```
-    $ cd ..
+    cd ..
     ```
 1. Open **app.R** and follow SETUP instructions
 1. Run the demo:
@@ -57,5 +57,5 @@
         ```
     - In Linux/MacOS/*nix:
         ```bash
-        $ ./launch_in_browser.sh
+        ./launch_in_browser.sh
         ```
