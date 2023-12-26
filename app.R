@@ -2,8 +2,8 @@ library(shiny)
 library(shinydbauth)
 
 # SETUP: choose database backend uncommenting one of the following lines
-# source('db_pg.R')
-source('db_sqlite.R')
+source('db_pg.R')
+# source('db_sqlite.R')
 
 source('movies.R')
 
