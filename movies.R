@@ -178,19 +178,20 @@ my_server_function <- function(user_data, input, output, session) {
     survey_user = 'none'
   }
   level <- ud$level
-  output$user_info <- render_user_info(
-    paste0('Username: <b>', ud$username, '</b><br>',
-          'Role: ', ud$role, '<br>',
-          'Level: ', level, '<br>',
-          'Province: ', prov, '<br>',
-          'Permissions: ','<br><ul><li>', gsub("\\|", "</li><li>", ud$perms), '</li></ul>',
-          'Survey user: ', survey_user
-    )
-  )
   calidad <- stri_detect_fixed(ud$perms, "calidad", max_count = 1)
   campo <- stri_detect_fixed(ud$perms, "seguimiento_campo", max_count = 1)
   cobertura <- stri_detect_fixed(ud$perms, "monitoreo_cobertura_gestion", max_count = 1)
 
+  output$user_info <- render_user_info(
+    paste0('Username: <b>', ud$username, '</b><br>',
+           'Role: ', ud$role, '<br>',
+           'Level: ', level, '<br>',
+           'Province: ', prov, '<br>',
+           'Permissions: ','<br><ul><li>', gsub("\\|", "</li><li>", ud$perms), '</li></ul>',
+           'Survey user: ', survey_user
+    )
+  )
+  
   output$scatterplot <- renderPlot({
     req(input$date)
     movies_selected_date <- movies %>%
