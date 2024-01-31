@@ -17,7 +17,18 @@
     ```
     set_r_path.cmd
     ```
-    It should print the version of found Rscript, if not please manually add the folder containing R.exe/Rscript.exe to your %PATH% environment variable and start another terminal session into this folder.
+    It should print the version of found Rscript, if not find this folder open **Rstudio** and type this in the console window:
+    ```
+    file.path(R.home("bin"), "")
+    ```
+    Copy the printed path and add it to the %PATH% environmental variable.
+    (TODO add procedure to do this).<br />
+    Then **open another terminal** into this folder and re-run:
+    ```
+    Rscript --version
+    ```
+    It should print the requested version.
+
 1. Run setup_data.R to download demo data:
     ```
     Rscript setup_data.R
